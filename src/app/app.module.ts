@@ -7,10 +7,12 @@ import { AppComponent } from './app.component';
 import { ENVIRONMENT_TOKEN } from './shared/tokens/environment.token';
 import { ApiService, apiServiceFactory } from './shared/utils/services';
 import { environment } from './../environments/environment';
+import { InjectServiceComponent } from './topics/inject-service/inject-service/inject-service.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    InjectServiceComponent
   ],
   imports: [
     BrowserModule,
