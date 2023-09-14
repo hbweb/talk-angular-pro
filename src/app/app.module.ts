@@ -7,10 +7,12 @@ import { AppComponent } from './app.component';
 import { ENVIRONMENT_TOKEN } from './shared/tokens/environment.token';
 import { ApiService, apiServiceFactory } from './shared/utils/services';
 import { environment } from './../environments/environment';
+import { HeaderComponent } from './shared/components/header/header.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    HeaderComponent
   ],
   imports: [
     BrowserModule,
@@ -21,7 +23,7 @@ import { environment } from './../environments/environment';
   providers: [
     {
       provide: ENVIRONMENT_TOKEN,
-      useValue: environment.production? 'prod' : '',  // Dynamically set ENVIRONMENT_TOKEN
+      useValue: environment.production ? 'prod' : '',  // Dynamically set ENVIRONMENT_TOKEN
     },
     {
       provide: ApiService,
