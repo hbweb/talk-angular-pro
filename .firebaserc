@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "seedrs-sm": {
+      "hosting": {
+        "angular-pro": [
+          "angular-pro-talk"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "seedrs-sm"
+  }
+}

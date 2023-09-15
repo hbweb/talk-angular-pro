@@ -1,0 +1,17 @@
+{
+  "hosting": {
+    "site": "angular-pro-talk",
+    "public": "dist/angular-pro",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ],
+    "rewrites": [
+      {
+        "source": "**",
+        "destination": "/index.html"
+      }
+    ]
+  }
+}
