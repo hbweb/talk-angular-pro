@@ -1,4 +1,8 @@
+import { map } from 'rxjs/operators';
 import { Component } from '@angular/core';
+import { Observable } from 'rxjs';
+import { Topic } from 'src/app/shared/models';
+import { TopicService } from './services/topic.service';
 
 @Component({
   selector: 'app-topic-listing',
@@ -6,5 +10,12 @@ import { Component } from '@angular/core';
   styleUrls: ['./topic-listing.component.scss']
 })
 export class TopicListingComponent {
+
+  topics$: Observable<Topic[]> = this.topicService.getTopics().pipe(
+    map( data => data.data)
+  );
+
+  constructor( private topicService: TopicService) {
+  }
 
 }
