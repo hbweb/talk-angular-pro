@@ -1,8 +1,18 @@
 {
   "status": 200,
   "data": [
-    {"id": 1, "title": "Content Injection", "icon": "fa-solid fa-house","path": "/"},
-    {"id": 2, "title": "Dependency Injection", "icon": "fa-brands fa-facebook","path": "/"},
-    {"id": 3, "title": "Angular Architecture", "icon": "fa-solid fa-bomb","path": "/"}
+    {"id": 1, "title": "Angular Architecture", "icon": "fa-solid fa-house","path": "/architecture"},
+    {"id": 2, "title": "Advanced Component", "icon": "fa-brands fa-facebook","path": "/component"},
+    {"id": 3, "title": "Dependency Injection", "icon": "fa-solid fa-bomb","path": "/dependency-injection"},
+    {"id": 4, "title": "Advanced Typescript", "icon": "fa-solid fa-bomb","path": "/typescript"},
+    {"id": 5, "title": "Performances", "icon": "fa-solid fa-bomb","path": "/performances"},
+    {"id": 6, "title": "State Management", "icon": "fa-solid fa-bomb","path": "/state-management"},
+    {"id": 7, "title": "Advanced Directive", "icon": "fa-solid fa-bomb","path": "/directive"},
+    {"id": 8, "title": "Advanced Routing", "icon": "fa-solid fa-bomb","path": "/routing"},
+    {"id": 9, "title": "Advanced Rxjs", "icon": "fa-solid fa-bomb","path": "/rxjs"},
+    {"id": 10, "title": "Pipes", "icon": "fa-solid fa-bomb","path": "/pipes"},
+    {"id": 11, "title": "Advanced Forms", "icon": "fa-solid fa-bomb","path": "/forms"},
+    {"id": 12, "title": "Security", "icon": "fa-solid fa-bomb","path": "/security"},
+    {"id": 13, "title": "Testing", "icon": "fa-solid fa-bomb","path": "/testing"}
   ]
 }
