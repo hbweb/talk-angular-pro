@@ -1,0 +1,26 @@
+.topics-container ul {
+  list-style: none;
+
+  li {
+    display: block;
+    background-color: #dfe4ec;
+    transform: translateY(0);
+    transition: all 0.3s linear 0s;
+
+    button {
+      opacity: 0; // hide button
+      background: #212752;
+      color: #fff;
+      text-transform: uppercase;
+    }
+
+    &:hover {
+      transform: translateY(-5px);
+      box-shadow: 10px 20px 30px 0 rgba(33,38,82,0.15);
+
+      button {
+        opacity: 1;
+      }
+    }
+  }
+}

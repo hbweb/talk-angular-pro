@@ -1,8 +1,8 @@
 {
   "status": 200,
   "data": [
-    {"id": 1, "title": "Dependency Injection", "shortDescription": "Short description","path": "/dependency-injection", "date": "2023-09-14T09:00:00.000Z"},
-    {"id": 2, "title": "Dependency Injection", "shortDescription": "Short description","path": "/dependency-injection", "date": "2023-09-14T09:00:00.000Z"},
-    {"id": 3, "title": "Dependency Injection", "shortDescription": "Short description","path": "/dependency-injection", "date": "2023-09-14T09:00:00.000Z"}
+    {"id": 1, "title": "Content Injection", "icon": "fa-solid fa-house","path": "/"},
+    {"id": 2, "title": "Dependency Injection", "icon": "fa-brands fa-facebook","path": "/"},
+    {"id": 3, "title": "Angular Architecture", "icon": "fa-solid fa-bomb","path": "/"}
   ]
 }

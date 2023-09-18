@@ -1,1 +1,16 @@
-<p>topic-listing works!</p>
+<div class="topics-container">
+  <ul *ngIf="(topics$ | async) as topics" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+    <ng-container *ngFor="let topic of topics">
+        <li class="item p-4">
+            <a href="{{ topic.path }}" routerLink="{{ topic.path }}">
+              <div class="title-wrapper flex justify-between py-4 mb-6">
+                <h4 class="text-xl">{{ topic.title }}</h4>
+                <i class="text-2xl {{topic.icon}}"></i>
+              </div>
+
+              <button class="inline-block w-full rounded py-3 px-6 text-white">View content details</button>
+            </a>
+        </li>
+    </ng-container>
+  </ul>
+</div>
