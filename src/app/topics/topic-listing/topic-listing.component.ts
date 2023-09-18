@@ -1,7 +1,8 @@
+import { map } from 'rxjs/operators';
 import { Component } from '@angular/core';
 import { Observable } from 'rxjs';
-import { of } from 'rxjs/internal/observable/of';
 import { Topic } from 'src/app/shared/models';
+import { TopicService } from './services/topic.service';
 
 @Component({
   selector: 'app-topic-listing',
@@ -10,16 +11,11 @@ import { Topic } from 'src/app/shared/models';
 })
 export class TopicListingComponent {
 
-  topics$: Observable<Topic[]> = of([
-    {"id": 1, "title": "Content Injection", "icon": "fa-solid fa-house","path": "/"},
-    {"id": 2, "title": "Dependency Injection", "icon": "fa-brands fa-facebook","path": "/"},
-    {"id": 3, "title": "Angular Architecture", "icon": "fa-solid fa-bomb","path": "/"},
-    {"id": 1, "title": "Content Injection", "icon": "fa-solid fa-house","path": "/"},
-    {"id": 2, "title": "Dependency Injection", "icon": "fa-brands fa-facebook","path": "/"},
-    {"id": 3, "title": "Angular Architecture", "icon": "fa-solid fa-bomb","path": "/"},
-    {"id": 1, "title": "Content Injection", "icon": "fa-solid fa-house","path": "/"},
-    {"id": 2, "title": "Dependency Injection", "icon": "fa-brands fa-facebook","path": "/"},
-    {"id": 3, "title": "Angular Architecture", "icon": "fa-solid fa-bomb","path": "/"}
-  ]);
+  topics$: Observable<Topic[]> = this.topicService.getTopics().pipe(
+    map( data => data.data)
+  );
+
+  constructor( private topicService: TopicService) {
+  }
 
 }

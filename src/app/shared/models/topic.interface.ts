@@ -4,3 +4,9 @@ export interface Topic {
   icon: string;
   path: string;
 }
+
+
+export interface TopicsResponse {
+  data: Topic[];
+  status: number;
+}
