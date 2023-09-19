@@ -1,0 +1,11 @@
+<ul class="items" *ngIf="topicCards">
+  <li
+    class="item p-4 mb-2 bg-slate-200 flex justify-between"
+    *ngFor="let topicCard of topicCards"
+  >
+    {{ topicCard.title }}
+    <a href="{{ topicCard.url }}" target="_blank"
+      ><i class="fa-solid fa-arrow-right-long mr-1"></i> Read</a
+    >
+  </li>
+</ul>

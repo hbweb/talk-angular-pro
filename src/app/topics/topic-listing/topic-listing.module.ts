@@ -9,12 +9,17 @@ const routes: Routes = [
   {
     path: '',
     component: TopicListingComponent
-  }
+  },
+  {
+    path: 'architecture',
+    loadChildren: () => import('../01-architecture/architecture/architecture.module').then(m => m.ArchitectureModule)
+  },
+
 ];
 
 @NgModule({
   declarations: [
-    TopicListingComponent
+    TopicListingComponent,
   ],
   imports: [
     RouterModule.forChild(routes),

@@ -1,0 +1,14 @@
+.items {
+  .item {
+    i {
+      opacity: 0;
+      transform: translateX(-10px);
+      transition: all 0.3s linear 0s;
+    }
+
+    &:hover i {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+}
