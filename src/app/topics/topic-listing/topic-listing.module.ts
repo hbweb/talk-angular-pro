@@ -19,7 +19,7 @@ const routes: Routes = [
 
 @NgModule({
   declarations: [
-    TopicListingComponent
+    TopicListingComponent,
   ],
   imports: [
     RouterModule.forChild(routes),
