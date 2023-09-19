@@ -15,6 +15,11 @@ const routes: Routes = [
     loadChildren: () => import('../01-architecture/architecture/architecture.module').then(m => m.ArchitectureModule)
   },
 
+  {
+    path: 'component',
+    loadChildren: () => import('../02-advanced-component/advanced-component.module').then(m => m.AdvancedComponentModule)
+  },
+
 ];
 
 @NgModule({

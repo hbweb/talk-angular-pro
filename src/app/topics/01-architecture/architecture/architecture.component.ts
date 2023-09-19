@@ -3,8 +3,7 @@ import { TopicCard } from 'src/app/shared/models';
 
 @Component({
   selector: 'app-architecture',
-  templateUrl: './architecture.component.html',
-  styleUrls: ['./architecture.component.scss']
+  templateUrl: './architecture.component.html'
 })
 export class ArchitectureComponent {
 
