@@ -14,4 +14,7 @@ export class AdvancedComponent {
     {title: 'ng-template and ng-container', url: ''},
     {title: 'Sanitization of HTML content', url: ''},
   ];
+
+
+  public message = "Hello from two way data binding";
 }

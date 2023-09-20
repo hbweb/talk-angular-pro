@@ -1,10 +1,8 @@
-import { ChangeDetectionStrategy, Component } from '@angular/core';
+import { ChangeDetectionStrategy, Component, EventEmitter, Input, Output } from '@angular/core';
 
 @Component({
   selector: 'app-custom-two-way-data-binding',
-  templateUrl: './custom-two-way-data-binding.component.html',
-  styleUrls: ['./custom-two-way-data-binding.component.scss'],
-  changeDetection: ChangeDetectionStrategy.OnPush
+  template: '',
 })
 export class CustomTwoWayDataBindingComponent {
 
@@ -18,7 +16,19 @@ export class CustomTwoWayDataBindingComponent {
 
   */
 
+  noteMsgValue!: string;
 
+  @Input()
+  set noteMsg(val) {
+    this.noteMsgValue  = val;
+    this.noteMsgChange.next(val);
+    console.log('setter: value ', val);
+  }
 
+  get noteMsg() {
+    console.log('getter: value ', this.noteMsgValue);
+    return this.noteMsgValue;
+  }
 
+  @Output() noteMsgChange = new EventEmitter<string>();
 }
