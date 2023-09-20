@@ -2,7 +2,20 @@ import { ChangeDetectionStrategy, Component, EventEmitter, Input, Output } from 
 
 @Component({
   selector: 'app-custom-two-way-data-binding',
-  template: '',
+  template:`
+    <div class="mt-5">
+      <ng-container *ngTemplateOutlet="greet"></ng-container>
+
+      <ng-container *ngTemplateOutlet="eng; context: myContext"></ng-container>
+
+      <ng-container *ngTemplateOutlet="vn; context: myContext"></ng-container>
+
+
+      <ng-template #greet><span>Hello</span> <br /></ng-template>
+      <ng-template #eng let-name><span>Hello {{name}}!</span> <br /></ng-template>
+      <ng-template #vn let-lang="localLang" let-name="localName" ><span>Xin Chào {{name}} ({{ lang }})!</span> <br /></ng-template>
+    </div>
+  `,
 })
 export class CustomTwoWayDataBindingComponent {
 
@@ -15,6 +28,11 @@ export class CustomTwoWayDataBindingComponent {
   Below is how we could build our own two way data binding
 
   */
+
+
+  /* Example for ng-template */
+  myContext = {$implicit: 'World', localLang: 'Tiếng Việt', localName: 'Hưng' };
+
 
   noteMsgValue!: string;
 
