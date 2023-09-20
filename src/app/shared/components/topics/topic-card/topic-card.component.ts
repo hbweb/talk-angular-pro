@@ -1,5 +1,5 @@
-import { CommonModule } from '@angular/common';
 import { ChangeDetectionStrategy, Component, Input } from '@angular/core';
+import { Router } from '@angular/router';
 import { TopicCard } from 'src/app/shared/models';
 
 @Component({
@@ -12,4 +12,9 @@ export class TopicCardComponent {
 
   @Input() topicCards: TopicCard[] | undefined = undefined;
 
+  constructor(private router: Router) { }
+
+  onClickBackBtn() {
+    this.router.navigate(['/topics'])
+  }
 }
