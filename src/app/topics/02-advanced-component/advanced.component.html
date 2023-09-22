@@ -1,14 +1,14 @@
-<div class="md:w-1/2">
-  <h1 class="mb-2 text-1xl font-bold text-gray-800 md:text-3xl">
-    Advanced Components
-  </h1>
+<h1 class="mb-2 text-1xl font-bold text-gray-800 md:text-3xl">
+  Advanced Components
+</h1>
+<p class="pb-8">A few topics to cover in this area:</p>
 
-  <p class="pb-8">A few topics to cover in this area:</p>
-
-  <app-topic-card [topicCards]="topicCards"></app-topic-card>
-
-  <app-custom-two-way-data-binding
-    [(noteMsg)]="message"
-  ></app-custom-two-way-data-binding>
-
+<div class="grid grid-cols-1 md:grid-cols-5 gap-6">
+  <div class="col-span-2"><app-topic-card [topicCards]="topicCards"></app-topic-card></div>
+  <div class="demo-content col-span-3 bg-slate-100 p-4 shadow-lg">
+    <app-custom-two-way-data-binding
+      [(noteMsg)]="message"
+    ></app-custom-two-way-data-binding>
+  </div>
 </div>
+
