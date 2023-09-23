@@ -20,7 +20,7 @@ export class TopicListingComponent {
 
 
   topicsTrackBy(index: number, topic: Topic) {
-    return topic.title;
+    return topic.id;
   }
 
 }
