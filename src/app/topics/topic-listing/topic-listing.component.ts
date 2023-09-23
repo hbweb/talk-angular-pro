@@ -12,10 +12,15 @@ import { TopicService } from './services/topic.service';
 export class TopicListingComponent {
 
   topics$: Observable<Topic[]> = this.topicService.getTopics().pipe(
-    map( data => data.data)
+    map(data => data.data)
   );
 
-  constructor( private topicService: TopicService) {
+  constructor(private topicService: TopicService) {
+  }
+
+
+  topicsTrackBy(index: number, topic: Topic) {
+    return topic.title;
   }
 
 }

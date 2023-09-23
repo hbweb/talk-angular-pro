@@ -1,6 +1,9 @@
-<main class="relative h-screen overflow-hidden bg-white dark:bg-gray-800">
+<main class="bg-white dark:bg-gray-800">
   <!-- Footer sticky -->
-  <div class="absolute hidden md:block -bottom-32 -left-32 w-96 h-96">
+  <div
+    *ngIf="isHome$ | async"
+    class="absolute md:block -bottom-32 -left-32 w-96 h-96"
+  >
     <div
       class="absolute z-20 text-xl text-extrabold right-12 text-start top-1/4"
     >
@@ -34,5 +37,4 @@
   </div>
 
   <!-- Footer Section -->
-
 </main>

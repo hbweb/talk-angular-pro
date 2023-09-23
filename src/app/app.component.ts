@@ -1,13 +1,20 @@
-import { HttpClient } from '@angular/common/http';
+import { Observable, filter, map } from 'rxjs';
 import { Component } from '@angular/core';
-import { ApiService } from './shared/utils/services';
-
+import { NavigationEnd, Router } from '@angular/router';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  constructor(private apiService: ApiService){
+
+  isHome$: Observable<boolean> = this.router.events.pipe(
+    filter(event => event instanceof NavigationEnd),
+    map((event) => event as NavigationEnd),
+    map((event) => event.url == '/')
+  )
+
+  constructor(private router: Router) {
+
   }
 }

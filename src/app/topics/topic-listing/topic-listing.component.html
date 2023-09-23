@@ -1,18 +1,36 @@
 <div class="topics-container">
-  <h1 class="mb-2 text-1xl font-bold text-gray-800 md:text-3xl ">Angular advanced topics</h1>
-  <p class="pb-8">Angular is an application-design framework and development platform for creating efficient and sophisticated single-page apps.</p>
-  <ul *ngIf="(topics$ | async) as topics" class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-4">
-    <ng-container *ngFor="let topic of topics">
-        <li class="item p-4">
-            <a href="/topics/{{ topic.path }}" routerLink="/topics/{{ topic.path }}">
-              <div class="title-wrapper flex justify-between py-4 mb-6">
-                <h4 class="text-xl">{{ topic.title }}</h4>
-                <i class="text-2xl {{topic.icon}}"></i>
-              </div>
+  <h1 class="mb-2 text-1xl font-bold text-gray-800 md:text-3xl">
+    Angular advanced topics
+  </h1>
+  <p class="pb-8">
+    Angular is an application-design framework and development platform for
+    creating efficient and sophisticated single-page apps.
+  </p>
 
-              <button class="inline-block w-full rounded py-3 px-6 text-white">View content</button>
-            </a>
-        </li>
+  <!-- Angular way -->
+  <!-- <ul *ngIf="(topics$ | async) as topics" class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-4"> -->
+
+  <!-- NgRx Component way using *ngrxLet (strongly recommended by Angular Core team)-->
+  <ul
+    *ngrxLet="topics$ as topics"
+    class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-4"
+  >
+    <ng-container *ngFor="let topic of topics; trackBy: topicsTrackBy">
+      <li class="item p-4">
+        <a
+          href="/topics/{{ topic.path }}"
+          routerLink="/topics/{{ topic.path }}"
+        >
+          <div class="title-wrapper flex justify-between py-4 mb-6">
+            <h4 class="text-xl">{{ topic.title }}</h4>
+            <i class="text-2xl {{ topic.icon }}"></i>
+          </div>
+
+          <button class="inline-block w-full rounded py-3 px-6 text-white">
+            View content
+          </button>
+        </a>
+      </li>
     </ng-container>
   </ul>
 </div>
