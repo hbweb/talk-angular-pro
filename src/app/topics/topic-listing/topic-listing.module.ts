@@ -4,6 +4,7 @@ import { NgModule } from '@angular/core';
 import { TopicListingComponent } from './topic-listing.component';
 import { CommonModule } from '@angular/common';
 import { HttpClientModule } from '@angular/common/http';
+import { LetDirective } from '@ngrx/component';
 
 const routes: Routes = [
   {
@@ -15,6 +16,11 @@ const routes: Routes = [
     loadChildren: () => import('../01-architecture/architecture/architecture.module').then(m => m.ArchitectureModule)
   },
 
+  {
+    path: 'component',
+    loadChildren: () => import('../02-advanced-component/advanced-component.module').then(m => m.AdvancedComponentModule)
+  },
+
 ];
 
 @NgModule({
@@ -24,6 +30,7 @@ const routes: Routes = [
   imports: [
     RouterModule.forChild(routes),
     CommonModule,
+    LetDirective,
     HttpClientModule
   ],
 })
