@@ -6,6 +6,9 @@
 <div class="grid grid-cols-1 md:grid-cols-5 gap-6">
   <div class="col-span-2"><app-topic-card [topicCards]="topicCards"></app-topic-card></div>
   <div class="demo-content col-span-3 bg-slate-100 p-4 shadow-lg">
+
+    <div markdown ngPreserveWhitespaces [data]="markdown1"></div>
+
     <app-custom-two-way-data-binding
       [(noteMsg)]="message"
     ></app-custom-two-way-data-binding>

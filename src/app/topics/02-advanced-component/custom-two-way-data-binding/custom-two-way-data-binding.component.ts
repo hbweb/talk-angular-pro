@@ -4,7 +4,6 @@ import { ChangeDetectionStrategy, Component, EventEmitter, Input, Output } from 
   selector: 'app-custom-two-way-data-binding',
   template:`
 
-    <h2>*ngTemplateOutlet</h2>
     <div class="mt-5">
       <ng-container *ngTemplateOutlet="greet"></ng-container>
 
