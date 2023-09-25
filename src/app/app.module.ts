@@ -8,6 +8,7 @@ import { ENVIRONMENT_TOKEN } from './shared/tokens/environment.token';
 import { ApiService, apiServiceFactory } from './shared/utils/services';
 import { environment } from './../environments/environment';
 import { HeaderComponent } from './shared/components/header/header.component';
+import { MarkdownModule } from 'ngx-markdown';
 
 @NgModule({
   declarations: [
@@ -19,6 +20,7 @@ import { HeaderComponent } from './shared/components/header/header.component';
     AppRoutingModule,
     BrowserAnimationsModule,
     HttpClientModule,
+    MarkdownModule.forRoot({ loader: HttpClient }),
   ],
   providers: [
     {
