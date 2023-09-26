@@ -7,17 +7,19 @@ import { AppComponent } from './app.component';
 import { ENVIRONMENT_TOKEN } from './shared/tokens/environment.token';
 import { ApiService, apiServiceFactory } from './shared/utils/services';
 import { environment } from './../environments/environment';
-import { HeaderComponent } from './shared/components/header/header.component';
+import { SharedComponentsModule } from './shared/components/shared-components.module';
+import { GuardComponent } from './topics/08-advanced-routing/components/guard/guard.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    HeaderComponent
+    GuardComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
+    SharedComponentsModule,
     HttpClientModule,
   ],
   providers: [
