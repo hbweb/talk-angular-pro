@@ -1,3 +1,4 @@
+import { MarkdownModule } from 'ngx-markdown';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule, Routes } from '@angular/router';
@@ -19,7 +20,8 @@ const routes: Routes = [
     RouterModule.forChild(routes),
     CommonModule,
     FormsModule,
-    SharedComponentsModule
+    SharedComponentsModule,
+    MarkdownModule.forRoot()
   ]
 })
 export class AdvancedComponentModule { }

@@ -17,4 +17,10 @@ export class AdvancedComponent {
 
   public message = "Hello from two way data binding";
 
+
+  markdown1 = `
+    \`\`\`typescript
+    <ng-container *ngTemplateOutlet="greet"></ng-container>
+    \`\`\`
+  `;
 }

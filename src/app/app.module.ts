@@ -9,6 +9,7 @@ import { ApiService, apiServiceFactory } from './shared/utils/services';
 import { environment } from './../environments/environment';
 import { SharedComponentsModule } from './shared/components/shared-components.module';
 import { GuardComponent } from './topics/08-advanced-routing/components/guard/guard.component';
+import { MarkdownModule } from 'ngx-markdown';
 
 @NgModule({
   declarations: [
@@ -21,6 +22,7 @@ import { GuardComponent } from './topics/08-advanced-routing/components/guard/gu
     BrowserAnimationsModule,
     SharedComponentsModule,
     HttpClientModule,
+    MarkdownModule.forRoot({ loader: HttpClient }),
   ],
   providers: [
     {
