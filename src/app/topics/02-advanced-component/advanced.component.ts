@@ -15,7 +15,6 @@ export class AdvancedComponent {
     {title: 'Sanitization of HTML content', url: ''},
   ];
 
-
   public message = "Hello from two way data binding";
 
 
