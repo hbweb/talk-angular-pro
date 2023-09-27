@@ -6,7 +6,8 @@
 <div class="grid grid-cols-1 md:grid-cols-5 gap-6">
   <div class="col-span-2"><app-topic-card [topicCards]="topicCards"></app-topic-card></div>
   <div class="demo-content col-span-3 bg-slate-100 p-4 shadow-lg">
-
+    <!-- Child routing content to be injected -->
+      <router-outlet></router-outlet>
   </div>
 </div>
 

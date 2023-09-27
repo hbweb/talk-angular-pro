@@ -4,6 +4,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { SharedComponentsModule } from 'src/app/shared/components/shared-components.module';
 import { AdvancedComponent } from './advanced.component';
 import { CustomTwoWayDataBindingComponent } from './custom-two-way-data-binding/custom-two-way-data-binding.component';
+import { FormsModule } from '@angular/forms';
 
 const routes: Routes = [
   {
@@ -17,6 +18,7 @@ const routes: Routes = [
   imports: [
     RouterModule.forChild(routes),
     CommonModule,
+    FormsModule,
     SharedComponentsModule
   ]
 })
