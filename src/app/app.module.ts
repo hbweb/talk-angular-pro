@@ -8,13 +8,11 @@ import { ENVIRONMENT_TOKEN } from './shared/tokens/environment.token';
 import { ApiService, apiServiceFactory } from './shared/utils/services';
 import { environment } from './../environments/environment';
 import { SharedComponentsModule } from './shared/components/shared-components.module';
-import { GuardComponent } from './topics/08-advanced-routing/components/guard/guard.component';
 import { MarkdownModule } from 'ngx-markdown';
 
 @NgModule({
   declarations: [
     AppComponent,
-    GuardComponent,
   ],
   imports: [
     BrowserModule,
