@@ -14,7 +14,13 @@ const routes: Routes = [
       path: 'with-guard',
       component: GuardComponent,
       canActivate: [canActivateUser]
-    }]
+    },
+    {
+      path: 'with-guard-urltree',
+      component: GuardComponent,
+      canActivate: [canActivateUser]
+    }
+    ]
   }
 ];
 
