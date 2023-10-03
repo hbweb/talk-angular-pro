@@ -6,8 +6,18 @@
 <div class="grid grid-cols-1 md:grid-cols-5 gap-6">
   <div class="col-span-2"><app-topic-card [topicCards]="topicCards"></app-topic-card></div>
   <div class="demo-content col-span-3 bg-slate-100 p-4 shadow-lg">
+
+
+    <div>
+      <h4>Guarded routes</h4>
+      <p>Route with guard - canActiviate <a class="underline ml-4 md:underline-offset-4" [routerLink]="['/topics/routing/with-guard']">Click here</a> </p>
+      <p>Route with guard - canActiviate return UrlTre (original route get cancelled and start navigating to new route) <a class="underline ml-4 md:underline-offset-4" [routerLink]="['/topics/routing/with-guard']">Click here</a> </p>
+
+    </div>
     <!-- Child routing content to be injected -->
-      <router-outlet></router-outlet>
+    <router-outlet></router-outlet>
+
+    <button class=" bg-slate-600 mt-4 rounded py-1 px-2 text-white" [routerLink]="['/topics/routing']">Go to routing page</button>
   </div>
 </div>
 
