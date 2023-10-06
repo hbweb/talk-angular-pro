@@ -9,7 +9,6 @@ import { ApiService, apiServiceFactory } from './shared/utils/services';
 import { environment } from './../environments/environment';
 import { SharedComponentsModule } from './shared/components/shared-components.module';
 import { MarkdownModule } from 'ngx-markdown';
-
 @NgModule({
   declarations: [
     AppComponent,
