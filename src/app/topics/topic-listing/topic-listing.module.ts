@@ -7,6 +7,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { LetDirective } from '@ngrx/component';
 import { TypescriptComponent } from '../04-advanced-typescript/typescript.component';
 import { SharedComponentsModule } from 'src/app/shared/components/shared-components.module';
+import { MarkdownModule } from 'ngx-markdown';
 
 const routes: Routes = [
   {
@@ -45,7 +46,8 @@ const routes: Routes = [
     CommonModule,
     SharedComponentsModule,
     LetDirective,
-    HttpClientModule
+    HttpClientModule,
+    MarkdownModule.forRoot()
   ],
 })
 export class TopicListingModule { }

@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { TopicCard } from 'src/app/shared/models';
 
 @Component({
@@ -15,13 +15,16 @@ import { TopicCard } from 'src/app/shared/models';
       <div>
         <p></p>
         <p></p>
+
+        <div markdown ngPreserveWhitespaces [data]="markdown1"></div>
+
       </div>
     </div>
   </div>
 
   `
 })
-export class TypescriptComponent {
+export class TypescriptComponent implements OnInit{
   public topicCards: TopicCard[] = [
     { title: 'Spread syntax and its different usages', url: '' },
     { title: 'Interface', url: '' },
@@ -31,4 +34,17 @@ export class TypescriptComponent {
     { title: 'Enums', url: '' },
     { title: 'Nullish coalescing operator', url: '' },
   ];
+
+  sum(x: number, y:number, z:number = 1) {
+    return x + y + z;
+  }
+
+  markdown1 = `
+    \`\`\`typescript
+    <ng-container *ngTemplateOutlet="greet"></ng-container>
+    \`\`\`
+  `;
+
+  ngOnInit(): void {
+  }
 }
