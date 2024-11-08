@@ -1,4 +1,8 @@
-import { HttpClient, HttpClientModule } from '@angular/common/http';
+import {
+  HttpClient,
+  provideHttpClient,
+  withInterceptorsFromDi,
+} from '@angular/common/http';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -11,28 +15,26 @@ import { SharedComponentsModule } from './shared/components/shared-components.mo
 import { MarkdownModule } from 'ngx-markdown';
 
 @NgModule({
-  declarations: [
-    AppComponent,
-  ],
+  declarations: [AppComponent],
+  bootstrap: [AppComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     SharedComponentsModule,
-    HttpClientModule,
     MarkdownModule.forRoot({ loader: HttpClient }),
   ],
   providers: [
     {
       provide: ENVIRONMENT_TOKEN,
-      useValue: environment.production ? 'prod' : '',  // Dynamically set ENVIRONMENT_TOKEN
+      useValue: environment.production ? 'prod' : '', // Dynamically set ENVIRONMENT_TOKEN
     },
     {
       provide: ApiService,
       useFactory: apiServiceFactory,
       deps: [HttpClient, ENVIRONMENT_TOKEN],
     },
+    provideHttpClient(withInterceptorsFromDi()),
   ],
-  bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {}
